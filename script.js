@@ -20,25 +20,25 @@ function btnClick(item){
         scoreEval();
         }
      }
-
-     function scoreEval(){
-        if(parseInt(yourScore.textContent) + parseInt(compScore.textContent) >= 5){
-            if (parseInt(yourScore.textContent) > parseInt(compScore.textContent)){
-                window.alert(`You win ${yourScore.textContent} to ${compScore.textContent}`);
-            } else {
-                window.alert(`You lose ${yourScore.textContent} to ${compScore.textContent}`);
-            }
-            yourScore.textContent = 0;
-            compScore.textContent = 0;
+//if score sum is 5 or greater, evaluates who's win a pops an alert stating a win/lose, score and then resets score
+function scoreEval(){
+    if(parseInt(yourScore.textContent) + parseInt(compScore.textContent) >= 5){
+         if (parseInt(yourScore.textContent) > parseInt(compScore.textContent)){
+             window.alert(`You win ${yourScore.textContent} to ${compScore.textContent}`);
+        } else {
+             window.alert(`You lose ${yourScore.textContent} to ${compScore.textContent}`);
+         }
+        yourScore.textContent = 0;
+        compScore.textContent = 0;
         }
     }
-
+//randomly selects computer's choice
 function computerPlay(){
     let selection = ["Rock", "Paper", "Scissors"];
     return selection[Math.floor(Math.random()*selection.length)];
  }
     
-    
+// sees who's won depending on computerPlay() to generate a random choice and player's choice decided by clicking a button
 function makePlay(myChoice, compChoice){
     if(myChoice == compChoice){
         return console.log(`draw ${myChoice} ${compChoice}` );
@@ -47,10 +47,8 @@ function makePlay(myChoice, compChoice){
                 myChoice == "Scissors" && compChoice == "Paper")
                 {
                     yourScore.textContent = parseInt(yourScore.textContent) + 1;
-                    return console.log(`win ${myChoice} ${compChoice}`);
                 } else {
                     compScore.textContent = parseInt(compScore.textContent) +1;
-                    return console.log(`lose ${myChoice} ${compChoice}`);
                 }
     
             }    

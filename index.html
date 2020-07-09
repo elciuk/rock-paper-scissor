@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="styles.css">
 
-</head>
-<script>
-    function computerPlay(){
-        let selection = ["rock", "paper", "scissors"];
-        return selection[Math.floor(Math.random()*selection.length)];
-    }
-    console.log(computerPlay());
-</script>
+</head> 
+    <div class="container">
+    <div class="your-score">0</div>
+    <div class="your-choices">
+        <button type="button">Rock</button>
+        <button type="button">Paper</button>
+        <button type="button">Scissors</button>
+    </div>
+    <div class="computer-choices">
+        <div class="computer-choice">Rock</div>
+        <div class="computer-choice">Paper</div>
+        <div class="computer-choice">Scissors</div>
+    </div>
+    <div class="computer-score">0</div>
+    </div>
 <body>
 
 </body>
+<script src="script.js"></script>
 </html>

@@ -20,7 +20,7 @@ function btnClick(item){
         scoreEval();
         }
      }
-//if score sum is 5 or greater, evaluates who's win a pops an alert stating a win/lose, score and then resets score
+//if score sum is 5 or greater, evaluates who's winner a pops an alert stating a win/lose, score and then resets score
 function scoreEval(){
     if(parseInt(yourScore.textContent) + parseInt(compScore.textContent) >= 5){
          if (parseInt(yourScore.textContent) > parseInt(compScore.textContent)){

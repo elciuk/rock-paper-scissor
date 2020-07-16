@@ -47,8 +47,10 @@ function makePlay(myChoice, compChoice){
                 myChoice == "Scissors" && compChoice == "Paper")
                 {
                     yourScore.textContent = parseInt(yourScore.textContent) + 1;
+                    console.log(`You win the round: ${myChoice} vs ${compChoice}`);
                 } else {
                     compScore.textContent = parseInt(compScore.textContent) +1;
+                    console.log(`You lose the round: ${myChoice} vs ${compChoice}`);
                 }
     
             }    
